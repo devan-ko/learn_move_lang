@@ -129,7 +129,7 @@ One Time Witness pattern
 
 - What is `UpgradeCap` for?
 
-- Pass object
+- Passing object
   - Through mentioned as reference
     - Use `&` or `&mut`
       - Case of `&mut` mean that value will be changed
@@ -137,7 +137,7 @@ One Time Witness pattern
     - This object passing used in transfer or deletion, etc. 
   - Ways of the Object wrapping
     - Using `Option`
-        - ```
+        ```
         struct warrior has key {
             id: UID,
             weapon : Option<weapon>,
@@ -145,15 +145,16 @@ One Time Witness pattern
         ```
         - Initialized with `option:none()`
         - necessary to use `option::extract` && `option::fill`. 
+    
     - Using `Vector`
-        - ```
+        ```
         Struct warrior has key {
             id: UID, 
             weapon : vector<weapon>
         }
         ```
     - Using Mention directly
-        - ```
+        ```
         struct warrior has key {
             id:UID,
             weapon : weapon,
