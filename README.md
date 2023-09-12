@@ -118,7 +118,20 @@ One Time Witness pattern
 
 # Self research
 
-- How about use entry function with using `public` key word?
+- How about use entry function
+  - Entry keyword is for transaction. 
 
 - Input object limitation
  256KB ([Reference](https://mysten-labs.slack.com/archives/C04FTNEMMFX/p1676333052221769?thread_ts=1676332278.472739&cid=C04FTNEMMFX))
+
+- [Storage fund](https://docs.sui.io/learn/tokenomics/storage-fund)
+  - The deletion option should not be confused with deleting past transactions. Activity on Sui is finalized at each epoch boundary and past transactions are immutable and can never be reversed. The type of data that can be deleted is, for example, data corresponding to objects that are no longer live such as an NFT’s metadata, tickets that have been redeemed, auctions that have concluded, etc.
+
+- What is `UpgradeCap` for?
+
+- Pass object
+  - Through mentioned as reference
+    - Use `&` or `&mut`
+      - Case of `&mut` mean that value will be changed
+  - Through mentioned as Value
+    - This object passing used in transfer or deletion, etc. 
