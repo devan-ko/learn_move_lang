@@ -135,3 +135,27 @@ One Time Witness pattern
       - Case of `&mut` mean that value will be changed
   - Through mentioned as Value
     - This object passing used in transfer or deletion, etc. 
+  - Ways of the Object wrapping
+    - Using `Option`
+        - ```
+        struct warrior has key {
+            id: UID,
+            weapon : Option<weapon>,
+        }
+        ```
+        - Initialized with `option:none()`
+        - necessary to use `option::extract` && `option::fill`. 
+    - Using `Vector`
+        - ```
+        Struct warrior has key {
+            id: UID, 
+            weapon : vector<weapon>
+        }
+        ```
+    - Using Mention directly
+        - ```
+        struct warrior has key {
+            id:UID,
+            weapon : weapon,
+        }
+        ```
